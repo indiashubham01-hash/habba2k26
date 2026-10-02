@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   Calendar, MapPin, Users, Trophy, Clock, ArrowLeft, Shield, 
-  FileText, CheckCircle, AlertTriangle, Phone, Mail, Share2, Sparkles, Download
+  FileText, CheckCircle, AlertTriangle, Phone, Mail, Share2, Sparkles, Download, Lock
 } from 'lucide-react';
 import { useRegistrations } from '../context/RegistrationContext';
 import ParticleBackground from '../components/ParticleBackground';
@@ -264,8 +264,9 @@ Acharya Institute of Technology, Bengaluru
                   <span className="text-[11px] text-gray-400 uppercase font-mono block">Entry Fee</span>
                   <span className="text-3xl font-black text-white font-mono">₹{event.fee}</span>
                 </div>
-                <span className="px-2.5 py-1 rounded bg-green-950/80 text-green-400 border border-green-500/40 text-xs font-mono font-bold">
-                  REGISTRATIONS OPEN
+                <span className="px-2.5 py-1 rounded bg-[#14141c] text-amber-300 border border-amber-400/50 text-[10px] font-minecraft font-bold flex items-center gap-1.5 shadow-sm">
+                  <Lock className="w-3 h-3 text-amber-400" />
+                  <span>REVEALING SOON</span>
                 </span>
               </div>
 
@@ -289,12 +290,12 @@ Acharya Institute of Technology, Bengaluru
               </div>
 
               <div className="space-y-3 pt-2">
-                <Link
-                  to={`/register?event=${event.id}`}
-                  className="btn-primary w-full py-3 text-center text-xs font-bold shadow-[0_0_20px_rgba(217,2,238,0.5)]"
+                <div
+                  className="btn-minecraft-emerald opacity-95 cursor-default w-full py-3 text-center text-xs font-minecraft flex items-center justify-center gap-2 select-none shadow-md"
                 >
-                  REGISTER FOR THIS EVENT
-                </Link>
+                  <Lock className="w-3.5 h-3.5 text-amber-300" />
+                  <span>REGISTRATIONS REVEALING SOON</span>
+                </div>
 
                 <button
                   onClick={handleDownloadRulebook}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Shield, User, LogOut, Sparkles, Terminal } from 'lucide-react';
+import { Menu, X, Shield, User, LogOut, Sparkles, Terminal, Lock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import FloatingLogo from './FloatingLogo';
@@ -135,18 +135,10 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="flex items-center space-x-3">
-                <Link
-                  to="/login"
-                  className="text-xs font-bold uppercase tracking-widest text-zinc-300 hover:text-white px-3 py-2"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/register"
-                  className="btn-primary !py-2 !px-5 text-xs shadow-[0_0_20px_rgba(255,255,255,0.4)]"
-                >
-                  REGISTER NOW
-                </Link>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#14141c] border border-amber-400/50 text-amber-300 font-minecraft text-[10px] uppercase tracking-wide shadow-sm select-none">
+                  <Lock className="w-3 h-3 text-amber-400" />
+                  <span>REVEALING SOON</span>
+                </div>
               </div>
             )}
           </div>
@@ -224,20 +216,10 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
-                    <Link
-                      to="/register"
-                      onClick={() => setIsOpen(false)}
-                      className="btn-minecraft-emerald w-full text-center text-[10px] min-[380px]:text-xs py-3 font-minecraft flex items-center justify-center gap-2"
-                    >
-                      <span>ENTER THE REALM [REGISTER]</span>
-                    </Link>
-                    <Link
-                      to="/login"
-                      onClick={() => setIsOpen(false)}
-                      className="btn-minecraft w-full text-center text-[10px] min-[380px]:text-xs py-2.5 font-minecraft"
-                    >
-                      SIGN IN / LOGIN
-                    </Link>
+                    <div className="btn-minecraft-emerald opacity-95 w-full text-center text-[10px] min-[380px]:text-xs py-3 font-minecraft flex items-center justify-center gap-2 select-none">
+                      <Lock className="w-3.5 h-3.5 text-amber-300" />
+                      <span>REGISTRATIONS REVEALING SOON</span>
+                    </div>
                   </>
                 )}
               </div>

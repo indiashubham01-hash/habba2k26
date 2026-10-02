@@ -3,7 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Calendar, MapPin, Users, Trophy, 
-  ArrowUpDown, Filter, Sparkles, ExternalLink, ArrowRight 
+  ArrowUpDown, Filter, Sparkles, ExternalLink, ArrowRight, Lock 
 } from 'lucide-react';
 import { useRegistrations } from '../context/RegistrationContext';
 import { eventCategories } from '../data/events';
@@ -212,12 +212,12 @@ const Events = () => {
                   >
                     VIEW DETAILS
                   </Link>
-                  <Link
-                    to={`/register?event=${event.id}`}
-                    className="btn-primary !py-2 text-center text-xs font-bold"
+                  <div
+                    className="bg-[#14141c] border border-amber-400/40 text-amber-300 !py-2 text-center text-[9.5px] font-minecraft font-bold flex items-center justify-center gap-1 select-none"
                   >
-                    REGISTER NOW
-                  </Link>
+                    <Lock className="w-3 h-3 text-amber-400 flex-shrink-0" />
+                    <span>REVEALING SOON</span>
+                  </div>
                 </div>
               </motion.div>
             ))}

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   ChevronRight, Calendar, MapPin, Users, Cpu, Trophy, Zap, Code, Shield,
   Sparkles, Award, ArrowRight, CheckCircle2, HelpCircle, Send, ExternalLink,
-  Terminal, Flame, Rocket, Star, Clock, Layers, Phone, Mail, Sword, Compass, Gem, Box
+  Terminal, Flame, Rocket, Star, Clock, Layers, Phone, Mail, Sword, Compass, Gem, Box, Lock
 } from 'lucide-react';
 import { eventsData, eventCategories, faqList, scheduleData } from '../data/events';
 import MinecraftParticleBackground from '../components/MinecraftParticleBackground';
@@ -188,20 +188,19 @@ const Home = () => {
             The national collegiate technical festival in high-res voxel grandeur. Gather your squad, mine breakthrough solutions, and clash for ₹1,50,000+ in bounties.
           </motion.p>
 
-          {/* Minecraft Emerald & Diamond Voxel Action Buttons (Comfortable on phone, inline on desktop) */}
+          {/* Minecraft Action Buttons: Registrations Revealing Soon + Explore Quests */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-4 mb-4 sm:mb-6 w-full max-w-[280px] sm:max-w-none mx-auto"
+            className="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-4 mb-4 sm:mb-6 w-full max-w-[320px] sm:max-w-none mx-auto"
           >
-            <Link
-              to="/register"
-              className="btn-minecraft-emerald w-full sm:w-auto text-center px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
+            <div
+              className="btn-minecraft-emerald w-full sm:w-auto text-center px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs select-none shadow-md cursor-default"
             >
-              <span>ENTER THE REALM [REGISTER]</span>
-              <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
-            </Link>
+              <Lock className="w-3.5 h-3.5 text-amber-300 flex-shrink-0" />
+              <span>REGISTRATIONS // REVEALING SOON</span>
+            </div>
             <Link
               to="/events"
               className="btn-minecraft-diamond w-full sm:w-auto text-center px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
@@ -617,13 +616,14 @@ const Home = () => {
 
                 <div className="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-white/10">
                   <span className="text-xs font-bold text-white font-mono">₹{event.fee} / team</span>
-                  <div className="flex gap-2">
-                    <Link to={`/events/${event.id}`} className="text-xs font-semibold text-zinc-400 hover:text-white px-2 py-1 font-mono">
+                  <div className="flex items-center gap-2">
+                    <Link to={`/events/${event.id}`} className="text-xs font-semibold text-zinc-300 hover:text-white px-2 py-1 font-mono border border-white/10 hover:border-white/30">
                       Rules
                     </Link>
-                    <Link to={`/register?event=${event.id}`} className="btn-minecraft-emerald !py-1.5 !px-3 text-[10px]">
-                      Register
-                    </Link>
+                    <span className="px-2.5 py-1 bg-[#14141c] border border-amber-400/40 text-amber-300 font-minecraft text-[8px] sm:text-[9px] flex items-center gap-1 select-none">
+                      <Lock className="w-2.5 h-2.5" />
+                      <span>REVEALING SOON</span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -698,62 +698,55 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-          8. SCHEDULE PREVIEW SECTION
+          8. SCHEDULE & TIMELINE (ENCRYPTED // REVEALING SOON)
           ================================================== */}
-      <section className="py-16 sm:py-20 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="schedule" className="py-16 sm:py-24 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
-            <div>
-              <span className="font-minecraft text-[10px] sm:text-xs text-[#55FF55] tracking-widest uppercase mb-2 block">
-                [ 3 DAYS OF ACTION ]
-              </span>
-              <h2 className="text-2xl sm:text-5xl font-black text-white font-cyber">
-                SCHEDULE <span className="neon-text">PREVIEW</span>
-              </h2>
+          <div className="minecraft-slot p-6 sm:p-12 relative overflow-hidden text-center border-2 border-[#3b3b4f]">
+            {/* Top Vault Lock Accent */}
+            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-5 bg-[#14141c] border-2 border-amber-400/60 flex items-center justify-center shadow-[0_0_25px_rgba(245,158,11,0.25)]">
+              <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-300 animate-pulse" />
             </div>
-            <Link to="/schedule" className="btn-minecraft !py-2 text-[10px] mt-3 md:mt-0 inline-block w-full sm:w-auto text-center">
-              VIEW FULL 3-DAY TIMELINE
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
-            {scheduleData.map((day) => (
-              <div key={day.day} className="minecraft-slot p-5 sm:p-6 flex flex-col">
-                <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
-                  <div>
-                    <span className="font-minecraft font-black text-base sm:text-lg text-white">{day.day}</span>
-                    <p className="text-xs text-zinc-400 font-mono">{day.date}</p>
+            <span className="font-minecraft text-[8.5px] sm:text-[10px] text-amber-300 tracking-widest uppercase mb-2 inline-block">
+              [ REALM DISPATCH // MASTER TIMELINE ]
+            </span>
+            <h2 className="text-2xl sm:text-5xl font-black text-white font-cyber mb-3 sm:mb-4">
+              TIMELINE & <span className="neon-text text-amber-300">SCHEDULE</span>
+            </h2>
+
+            <p className="text-zinc-400 text-xs sm:text-sm md:text-base max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-mono">
+              The official 3-day quest schedule, stage timelines, 24-hour hackathon milestones, and arena slots are currently undergoing final calibration. The full timetable will be revealed soon.
+            </p>
+
+            {/* 3 Locked Day Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8 text-left">
+              {[
+                { day: 'DAY 01', title: 'INAUGURATION & KEYNOTE QUESTS', status: 'REVEALING SOON' },
+                { day: 'DAY 02', title: '24H HACKATHON & ARENA WARS', status: 'REVEALING SOON' },
+                { day: 'DAY 03', title: 'GRAND FINALE & AWARDS CEREMONY', status: 'REVEALING SOON' },
+              ].map((item) => (
+                <div key={item.day} className="p-3.5 sm:p-4 bg-[#0d0d14] border border-[#2d2d3d] flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-minecraft text-xs text-white font-bold">{item.day}</span>
+                    <span className="text-[8px] font-minecraft text-amber-300 flex items-center gap-1">
+                      <Lock className="w-2.5 h-2.5" />
+                      <span>LOCKED</span>
+                    </span>
                   </div>
-                  <span className="text-[9px] sm:text-[10px] font-minecraft bg-black text-[#55FF55] px-2 py-0.5 sm:px-2.5 sm:py-1 border border-[#55FF55]/40">
-                    {day.events.length} Tracks
+                  <p className="text-[11px] font-mono text-zinc-400 mb-2 leading-snug">{item.title}</p>
+                  <span className="text-[8.5px] font-minecraft text-emerald-400 uppercase tracking-tight">
+                    // {item.status}
                   </span>
                 </div>
+              ))}
+            </div>
 
-                <div className="space-y-2.5 sm:space-y-3 flex-grow">
-                  {day.events.slice(0, 3).map((item) => (
-                    <div key={item.id} className="p-2.5 sm:p-3 bg-[#0c0c10] border border-white/10 hover:border-white/30 transition-colors">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-bold text-white line-clamp-1">{item.name}</span>
-                        <span className="text-[10px] font-mono text-zinc-300">{item.time.split(' - ')[0]}</span>
-                      </div>
-                      <div className="flex items-center justify-between text-[11px] text-zinc-400 font-mono">
-                        <span>{item.venue}</span>
-                        <span className="text-[8.5px] sm:text-[9px] text-[#4dedf4] font-minecraft">[{item.category}]</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/schedule"
-                  className="mt-3.5 pt-2.5 border-t border-white/10 text-center text-xs font-bold text-[#4dedf4] hover:underline flex items-center justify-center gap-1 font-mono"
-                >
-                  <span>See all {day.day} events</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            ))}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/60 border border-amber-400/40 text-amber-300 font-minecraft text-[9px] sm:text-xs select-none">
+              <Sparkles className="w-3.5 h-3.5 text-amber-300 flex-shrink-0" />
+              <span>MASTER TIMELINE: REVEALING SOON</span>
+            </div>
           </div>
 
         </div>
@@ -840,30 +833,36 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-          10. REGISTRATION CTA SECTION
+          10. REGISTRATION CTA SECTION (REVEALING SOON)
           ================================================== */}
       <section className="py-16 sm:py-24 relative z-10 text-center overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-          <div className="minecraft-slot p-6 sm:p-14 relative border-2 border-[#17dd62]/40 shadow-[0_0_50px_rgba(23,221,98,0.15)]">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#17dd62] text-[#032b10] flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-[0_0_30px_#17dd62]">
-              <Rocket className="w-6 h-6 sm:w-8 sm:h-8 text-[#032b10]" />
+          <div className="minecraft-slot p-6 sm:p-14 relative border-2 border-amber-400/40 shadow-[0_0_50px_rgba(245,158,11,0.12)]">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#14141c] border-2 border-amber-400/60 text-amber-300 flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-[0_0_30px_rgba(245,158,11,0.25)]">
+              <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-300" />
             </div>
 
+            <span className="font-minecraft text-[8.5px] sm:text-[10px] text-amber-300 tracking-widest uppercase mb-2 inline-block">
+              [ PORTAL STATUS: CALIBRATING ]
+            </span>
+
             <h2 className="text-2xl sm:text-5xl font-black text-white mb-3 sm:mb-4 font-cyber">
-              READY TO CLAIM YOUR <span className="neon-text">VICTORY?</span>
+              REGISTRATION PORTAL // <span className="neon-text text-amber-300">REVEALING SOON</span>
             </h2>
 
             <p className="text-zinc-300 text-xs sm:text-base max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-mono">
-              Secure your slot in Tech Habba 2.0 before registrations close. Instant digital verification and unique registration QR codes generated immediately upon registration.
+              The portal gates for Tech Habba 2.0 registrations, team entries, and individual quest slots are currently locked in preparation for deployment. Official entry will open shortly.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
-              <Link to="/register" className="btn-minecraft-emerald !py-3.5 sm:!py-4 !px-6 sm:!px-8 text-[10px] sm:text-xs font-minecraft w-full sm:w-auto">
-                START REGISTRATION NOW
-              </Link>
-              <Link to="/accommodation" className="btn-minecraft-diamond !py-3.5 sm:!py-4 !px-6 sm:!px-8 text-[10px] sm:text-xs font-minecraft w-full sm:w-auto">
-                BOOK ACCOMMODATION (₹450/day)
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
+              <div className="btn-minecraft-emerald opacity-95 cursor-default !py-3.5 sm:!py-4 !px-6 sm:!px-8 text-[10px] sm:text-xs font-minecraft w-full sm:w-auto flex items-center justify-center gap-2 select-none shadow-md">
+                <Lock className="w-3.5 h-3.5 text-amber-300 flex-shrink-0" />
+                <span>REGISTRATIONS REVEALING SOON</span>
+              </div>
+              <Link to="/events" className="btn-minecraft-diamond !py-3.5 sm:!py-4 !px-6 sm:!px-8 text-[10px] sm:text-xs font-minecraft w-full sm:w-auto flex items-center justify-center gap-2">
+                <span>⚔</span>
+                <span>EXPLORE ALL 13 QUESTS</span>
               </Link>
             </div>
           </div>
