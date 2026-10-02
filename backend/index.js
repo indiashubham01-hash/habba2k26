@@ -11,12 +11,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/auth', require('./routes/authRoutes'));
+app.use(['/api/auth', '/auth'], require('./routes/authRoutes'));
 
-app.get('/', (req, res) => {
+app.get(['/', '/api'], (req, res) => {
   res.send('Tech Habba 2K26 API is running...');
 });
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
