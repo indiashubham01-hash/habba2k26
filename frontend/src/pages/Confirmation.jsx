@@ -68,7 +68,7 @@ const Confirmation = () => {
             REGISTRATION <span className="neon-text">SUCCESSFUL</span>
           </h1>
           <p className="text-gray-400 text-sm mt-1">
-            TECH HABBA 2K26 • Acharya Institute of Technology
+            TECH HABBA 2.0 • Acharya Institute of Technology
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const Confirmation = () => {
                 OFFICIAL FEST E-PASS & RECEIPT
               </span>
               <h3 className="font-cyber font-black text-2xl text-white">
-                TECH HABBA <span className="neon-text">2K26</span>
+                TECH HABBA <span className="neon-text">2.0</span>
               </h3>
               <p className="text-xs text-gray-400">12 - 14 Nov 2026 • Acharya Campus, Bengaluru</p>
             </div>

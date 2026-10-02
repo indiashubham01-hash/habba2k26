@@ -13,7 +13,7 @@ const TechHabbaMinecraftTitle = ({ className = '' }) => {
   const splashes = [
     "Now with 100% more Redstone!",
     "Craft your Future!",
-    "Level 26 Unlocked!",
+    "Level 2.0 Unlocked!",
     "Beware of Creepers!",
     "Diamond Tier Innovation!",
     "Powered by Code & Netherite!",
@@ -101,7 +101,7 @@ const TechHabbaMinecraftTitle = ({ className = '' }) => {
                 WebkitTextStroke: '1.5px #073840',
               }}
             >
-              2K26
+              2.0
             </span>
           </div>
 
@@ -133,7 +133,7 @@ const TechHabbaMinecraftTitle = ({ className = '' }) => {
       >
         <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-4 py-1 sm:py-1.5 bg-[#14141a] border-t-2 border-l-2 border-[#383848] border-b-2 border-r-2 border-[#09090c] shadow-[inset_1px_1px_0_#4c4c60]">
           <span className="text-[#55FF55] font-minecraft text-[9px] min-[380px]:text-[11px] sm:text-xs font-bold whitespace-nowrap">
-            [EXP LVL 26: NATIONAL TECHFEST]
+            [EXP LVL 2.0: NATIONAL TECHFEST]
           </span>
         </div>
       </motion.div>

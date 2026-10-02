@@ -39,7 +39,7 @@ const EventDetails = () => {
   };
 
   const handleDownloadRulebook = () => {
-    const text = `TECH HABBA 2K26 - OFFICIAL EVENT RULEBOOK
+    const text = `TECH HABBA 2.0 - OFFICIAL EVENT RULEBOOK
 Event: ${event.name}
 Category: ${event.category}
 Date & Time: ${event.date} (${event.time})
@@ -67,7 +67,7 @@ COORDINATORS:
 ${event.coordinator} (${event.contactPhone} | ${event.contactEmail})
 
 Acharya Institute of Technology, Bengaluru
-© 2026 TECH HABBA 2K26`;
+© 2026 TECH HABBA 2.0`;
 
     const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -118,7 +118,7 @@ Acharya Institute of Technology, Bengaluru
 
             <div className="absolute bottom-6 left-6 right-6">
               <span className="text-xs font-mono text-cyan-400 tracking-widest uppercase block mb-1">
-                TECH HABBA 2K26 CHAMPIONSHIP
+                TECH HABBA 2.0 CHAMPIONSHIP
               </span>
               <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white font-cyber mb-2">
                 {event.name}

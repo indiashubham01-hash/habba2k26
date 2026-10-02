@@ -78,12 +78,12 @@ const Countdown = () => {
         ))}
       </div>
 
-      {/* Minecraft Experience (XP) Bar with Level 26 */}
+      {/* Minecraft Experience (XP) Bar with Level 2.0 */}
       <div className="relative pt-1 sm:pt-2 pb-1 px-1">
         {/* XP Level Badge Centered */}
         <div className="flex justify-center items-center mb-1">
           <span className="minecraft-xp-level text-xs sm:text-sm md:text-base font-bold">
-            26
+            2.0
           </span>
         </div>
 
@@ -240,7 +240,7 @@ const Home = () => {
               [ ADVANCEMENT: DISCOVER THE REALM ]
             </span>
             <h2 className="text-2xl sm:text-5xl font-black text-white mb-4 sm:mb-6 font-cyber">
-              ABOUT <span className="neon-text">TECH HABBA 2K26</span>
+              ABOUT <span className="neon-text">TECH HABBA 2.0</span>
             </h2>
             <p className="text-zinc-300 text-sm sm:text-lg leading-relaxed font-mono">
               "A collegiate gathering where coders, designers, gamers, and strategists unite in a Minecraft-inspired battlefield to engineer legendary software and conquer technical quests."
@@ -775,7 +775,7 @@ const Home = () => {
                   FEST METRICS & <span className="neon-text">PRIZES</span>
                 </h2>
                 <p className="text-zinc-300 text-xs sm:text-base mb-6 sm:mb-8 leading-relaxed font-mono">
-                  Tech Habba 2K26 stands as one of the largest collegiate technical symposiums in South India, hosting students from premier universities and technology institutes.
+                  Tech Habba 2.0 stands as one of the largest collegiate technical symposiums in South India, hosting students from premier universities and technology institutes.
                 </p>
 
                 <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
@@ -854,7 +854,7 @@ const Home = () => {
             </h2>
 
             <p className="text-zinc-300 text-xs sm:text-base max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-mono">
-              Secure your slot in Tech Habba 2K26 before registrations close. Instant digital verification and unique registration QR codes generated immediately upon registration.
+              Secure your slot in Tech Habba 2.0 before registrations close. Instant digital verification and unique registration QR codes generated immediately upon registration.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">

@@ -137,7 +137,7 @@ const Register = () => {
             // OFFICIAL EVENT REGISTRATION
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white mb-3">
-            REGISTER FOR <span className="neon-text">TECH HABBA 2K26</span>
+            REGISTER FOR <span className="neon-text">TECH HABBA 2.0</span>
           </h1>
           <p className="text-gray-400 text-sm max-w-xl mx-auto">
             Fill in your participant and team credentials to generate your official festival entry badge and access code.

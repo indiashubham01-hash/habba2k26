@@ -111,7 +111,7 @@ const AdminDashboard = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `TechHabba2K26_Registrations_${Date.now()}.csv`);
+    link.setAttribute('download', `TechHabba2_0_Registrations_${Date.now()}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -170,7 +170,7 @@ const AdminDashboard = () => {
                 ORGANIZER & ADMIN CONSOLE
               </span>
               <h1 className="text-2xl sm:text-3xl font-black text-white font-cyber">
-                TECH HABBA 2K26 <span className="neon-text">ADMIN HUB</span>
+                TECH HABBA 2.0 <span className="neon-text">ADMIN HUB</span>
               </h1>
               <p className="text-xs text-gray-400 font-mono">
                 Acharya Institute of Technology • Live Database & Operations
@@ -471,7 +471,7 @@ const AdminDashboard = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
           <div className="w-full max-w-xl bg-dark-950 border border-purple-500/40 rounded-2xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
             <h3 className="font-cyber font-bold text-xl text-white mb-4">
-              {editingEvent ? 'Edit Fest Event' : 'Add New Event to TECH HABBA 2K26'}
+              {editingEvent ? 'Edit Fest Event' : 'Add New Event to TECH HABBA 2.0'}
             </h3>
 
             <form onSubmit={handleSaveEvent} className="space-y-4 text-xs">

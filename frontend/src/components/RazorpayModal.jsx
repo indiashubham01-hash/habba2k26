@@ -47,7 +47,7 @@ const RazorpayModal = ({ isOpen, onClose, amount, eventName, studentName, email,
             </div>
             <div>
               <h3 className="text-white font-bold text-sm flex items-center gap-1.5">
-                TECH HABBA 2K26
+                TECH HABBA 2.0
                 <span className="text-[10px] bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded border border-green-500/40">Verified</span>
               </h3>
               <p className="text-[11px] text-blue-200">Official Acharya Fest Payment Gateway</p>

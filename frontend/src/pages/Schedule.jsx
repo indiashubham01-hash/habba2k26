@@ -57,7 +57,7 @@ const Schedule = () => {
             FEST <span className="neon-text">SCHEDULE</span>
           </h1>
           <p className="text-gray-400 text-sm">
-            Interactive 3-day timeline of Tech Habba 2K26. Filter tracks by venue, category, and review overlapping event alerts.
+            Interactive 3-day timeline of Tech Habba 2.0. Filter tracks by venue, category, and review overlapping event alerts.
           </p>
         </div>
 

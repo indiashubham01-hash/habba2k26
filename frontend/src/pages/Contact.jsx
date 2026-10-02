@@ -30,7 +30,7 @@ const Contact = () => {
             // FEST CONTROL ROOM
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white mb-3">
-            CONTACT <span className="neon-text">TECH HABBA 2K26</span>
+            CONTACT <span className="neon-text">TECH HABBA 2.0</span>
           </h1>
           <p className="text-gray-400 text-sm">
             Reach out to our executive faculty conveners, domain heads, and student coordinators for inquiries, sponsorships, or urgent support.

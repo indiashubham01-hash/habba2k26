@@ -160,7 +160,7 @@ export const eventsData = [
     name: 'The Big Hack (Hackathon)',
     category: 'HACKATHON',
     tagline: '24-Hour Non-Stop Prototype Building Marathon',
-    description: 'The flagship 24-hour national hackathon of Tech Habba 2K26. Build transformative software and hardware solutions addressing tracks like Smart Cities, Next-Gen Fintech, Healthcare AI, Cyber Resilience, and Open Innovation.',
+    description: 'The flagship 24-hour national hackathon of Tech Habba 2.0. Build transformative software and hardware solutions addressing tracks like Smart Cities, Next-Gen Fintech, Healthcare AI, Cyber Resilience, and Open Innovation.',
     date: '12-13 Nov 2026',
     day: 'Day 1 & Day 2',
     time: '10:00 AM (24 Hours non-stop)',
@@ -482,11 +482,11 @@ export const scheduleData = [
 export const faqList = [
   {
     q: 'Who can participate?',
-    a: 'Any student currently enrolled in an undergraduate (B.E., B.Tech, BCA, B.Sc, BBA, etc.) or postgraduate (M.Tech, MCA, MBA, M.Sc) program at any recognized university or college can participate in Tech Habba 2K26.'
+    a: 'Any student currently enrolled in an undergraduate (B.E., B.Tech, BCA, B.Sc, BBA, etc.) or postgraduate (M.Tech, MCA, MBA, M.Sc) program at any recognized university or college can participate in Tech Habba 2.0.'
   },
   {
     q: 'Can students from other colleges participate?',
-    a: 'Yes, absolutely! Tech Habba 2K26 is a national-level inter-collegiate technical fest. We welcome students, teams, and colleges from across India to compete and innovate.'
+    a: 'Yes, absolutely! Tech Habba 2.0 is a national-level inter-collegiate technical fest. We welcome students, teams, and colleges from across India to compete and innovate.'
   },
   {
     q: 'How do I register?',

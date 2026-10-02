@@ -1,6 +1,6 @@
-# TECH HABBA 2K26
+# TECH HABBA 2.0
 
-Welcome to the TECH HABBA 2K26 Full Stack Application!
+Welcome to the TECH HABBA 2.0 Full Stack Application!
 
 ## Setup Instructions
 
@@ -52,4 +52,4 @@ Welcome to the TECH HABBA 2K26 Full Stack Application!
 - **Security**: Password hashing, secure routes, environment variables.
 - **Design**: Premium high-contrast futuristic monochromatic 3D theme with reactive Acharya logo and interactive box highlights.
 
-Enjoy exploring TECH HABBA 2K26!
+Enjoy exploring TECH HABBA 2.0!

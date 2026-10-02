@@ -83,7 +83,7 @@ const Login = () => {
               </div>
             </div>
             <span className="font-cyber font-black tracking-wider text-xl text-white">
-              TECH <span className="neon-text">HABBA</span> 2K26
+              TECH <span className="neon-text">HABBA</span> 2.0
             </span>
           </Link>
 

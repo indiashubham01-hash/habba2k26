@@ -65,7 +65,7 @@ const Events = () => {
             ALL <span className="neon-text">13 EVENTS</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-            Choose your battlefield across Coding, Hackathons, Gaming eSports, Cyber Defense, AI, Quizzes, and Creative Arts at Tech Habba 2K26.
+            Choose your battlefield across Coding, Hackathons, Gaming eSports, Cyber Defense, AI, Quizzes, and Creative Arts at Tech Habba 2.0.
           </p>
         </div>
 

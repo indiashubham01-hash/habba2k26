@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
               </div>
               <span className="font-cyber font-black tracking-wider text-2xl text-white">
-                TECH <span className="neon-text">HABBA</span> <span className="text-black text-xs px-1.5 py-0.5 rounded bg-white font-bold font-sans">2K26</span>
+                TECH <span className="neon-text">HABBA</span> <span className="text-black text-xs px-1.5 py-0.5 rounded bg-white font-bold font-sans">2.0</span>
               </span>
             </Link>
             
@@ -114,7 +114,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-3">
-          <p>© 2026 TECH HABBA 2K26. All Rights Reserved. Acharya Institute of Technology.</p>
+          <p>© 2026 TECH HABBA 2.0. All Rights Reserved. Acharya Institute of Technology.</p>
           <div className="flex items-center space-x-6 text-zinc-400">
             <Link to="/faq" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/faq" className="hover:text-white transition-colors">Terms & Conditions</Link>

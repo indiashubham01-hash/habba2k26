@@ -66,7 +66,7 @@ const Navbar = () => {
             <FloatingLogo size={36} />
             <div className="flex flex-col">
               <span className="font-cyber font-black tracking-wider text-xl text-white flex items-center gap-1.5">
-                <span className="text-white text-3d-subtle">TECH HABBA</span> <span className="text-black font-sans text-xs px-1.5 py-0.5 rounded bg-white font-bold">2K26</span>
+                <span className="text-white text-3d-subtle">TECH HABBA</span> <span className="text-black font-sans text-xs px-1.5 py-0.5 rounded bg-white font-bold">2.0</span>
               </span>
               <span className="text-[9px] uppercase tracking-[0.25em] text-zinc-400 font-medium">
                 Acharya Institute of Technology
