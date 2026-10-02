@@ -1,14 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-/**
- * ParticleBackground - HackerRing (https://hackering.netlify.app/) Inspired Background System
- * - Industrial Workbench Gradient (`bg-workbench-gradient`)
- * - 32px Precision Matrix Grid Overlay (`bg-grid-overlay`)
- * - Interactive Elastic Physics Dot Gravity Matrix Canvas:
- *   Points dynamically pull toward cursor with mass-spring damping, elastic momentum, and bloom glow
- * - 3D Bloated Floating Material Emblems drifting in true 3D space with zero blur
- * - High-tech CRT Scanline Overlay (`scanline-overlay`)
- */
+
 const ParticleBackground = ({
   gridStepX = 24,
   gridStepY = 24,
@@ -145,8 +137,11 @@ const ParticleBackground = ({
     document.addEventListener('mouseleave', handleMouseLeave);
 
     // =========================================================================
-    // 3D BLOATED LOGO RENDERER (Crisp, High-Gloss, Zero Blurriness)
+    // AUTHENTIC "THE BIG O" LOGO RENDERER (Crisp, High-Definition, Zero Blur)
     // =========================================================================
+    const bigOImg = new Image();
+    bigOImg.src = '/the-big-o-clean.png';
+
     const renderBloatedLogo = (
       ctx,
       x,
@@ -170,7 +165,17 @@ const ParticleBackground = ({
 
       ctx.scale(scaleX, scaleY);
       ctx.rotate(rz);
-      ctx.globalAlpha = Math.max(0.12, Math.min(0.95, opacity));
+      ctx.globalAlpha = Math.max(0.18, Math.min(0.95, opacity));
+
+      // If authentic Big O image is loaded, draw it directly with high-definition clarity
+      if (bigOImg.complete && bigOImg.naturalWidth > 0) {
+        ctx.shadowColor = 'rgba(255, 255, 255, 0.45)';
+        ctx.shadowBlur = Math.max(8, size * 0.15);
+        ctx.drawImage(bigOImg, -size, -size, size * 2, size * 2);
+        ctx.shadowBlur = 0;
+        ctx.restore();
+        return;
+      }
 
       // Localized 2D light direction relative to object center
       const dx = screenLightX - x;
@@ -431,58 +436,7 @@ const ParticleBackground = ({
       });
 
       // -----------------------------------------------------------------------
-      // 2. BACKGROUND "THE BIG O" EMBLEM (COUNTER-REACTIVE 3D POP DYNAMICS)
-      // -----------------------------------------------------------------------
-      const masterSize = Math.min(width, height) * (width < 768 ? 0.22 : 0.24);
-      const masterCenterX = centerX - camShiftX * 0.42;
-      const masterCenterY = centerY - 20 - camShiftY * 0.42;
-
-      // Check if cursor is near Big-O to trigger Big-O pop-up
-      let bigOPopping = false;
-      let cursorPop = 0;
-      if (mouse.active) {
-        const distToCenter = Math.hypot(mouse.x - masterCenterX, mouse.y - masterCenterY);
-        if (distToCenter < 230) {
-          const prox = Math.pow(1 - distToCenter / 230, 2);
-          cursorPop = prox * 0.42; // Big-O pops up!
-          bigOPopping = true;
-        }
-      }
-
-      // Notify Acharya logo about Big-O pop status
-      window.dispatchEvent(
-        new CustomEvent('bigo-pop-event', { detail: { popping: bigOPopping } })
-      );
-
-      // Natural breathing pulse (time * 1.5):
-      const naturalBloat = 1 + 0.12 * Math.sin(time * 1.5);
-
-      // Counter-pop: if Acharya is popping forward, Big-O pops back!
-      const acharyaRecede = acharyaPopping ? 0.25 : 0;
-
-      const totalBloat = Math.max(0.65, naturalBloat + cursorPop - acharyaRecede);
-      const masterOpacity = Math.max(0.12, Math.min(0.65, 0.32 + cursorPop * 0.35 - (acharyaPopping ? 0.14 : 0)));
-
-      const masterRx = Math.sin(time * 0.3) * 0.16 + camTiltX * 1.15;
-      const masterRy = Math.cos(time * 0.25) * 0.22 + camTiltY * 1.15;
-      const masterRz = time * 0.035;
-
-      renderBloatedLogo(
-        ctx,
-        masterCenterX,
-        masterCenterY,
-        masterSize,
-        masterRx,
-        masterRy,
-        masterRz,
-        masterOpacity,
-        totalBloat,
-        mouse.active ? mouse.x : centerX,
-        mouse.active ? mouse.y : centerY
-      );
-
-      // -----------------------------------------------------------------------
-      // 3. 3D FLOATING BLOATED LOGO INSTANCES (WITH 3D PARALLAX & CURSOR BLOAT)
+      // 2. 3D FLOATING LOGO INSTANCES (WITH 3D PARALLAX & CURSOR BLOAT)
       // -----------------------------------------------------------------------
       transformedLogos.forEach(({ item, projX, projY, projZ }) => {
         const k = focalLength / projZ;

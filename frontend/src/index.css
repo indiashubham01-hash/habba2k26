@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Marcellus&family=Orbitron:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Philosopher:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Press+Start+2P&family=Rozha+One&family=Silkscreen:wght@400;700&family=VT323&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,6 +7,17 @@
   --font-cyber: 'Orbitron', monospace;
   --font-pixel: 'Silkscreen', monospace;
   --font-mono: 'Fira Code', monospace;
+  --font-minecraft: 'Press Start 2P', 'VT323', 'Silkscreen', monospace;
+  --font-minecraft-alt: 'VT323', monospace;
+  --font-pravrutti: 'Marcellus', 'Cinzel Decorative', serif;
+  --font-serif-grand: 'Rozha One', 'Cinzel Decorative', serif;
+
+  --color-minecraft-diamond: #4dedf4;
+  --color-minecraft-emerald: #17dd62;
+  --color-minecraft-redstone: #ff2a44;
+  --color-minecraft-gold: #fbee37;
+  --color-minecraft-obsidian: #120c1f;
+  --color-minecraft-portal: #9c27b0;
 
   --color-black-pure: #000000;
   --color-dark-950: #040404;
@@ -42,49 +53,172 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
 }
 
-/* 3D Bold Extruded Typography Effect for TECH HABBA 2026 (Zero Blurriness, High Contrast) */
+/* Pravrutti-Inspired Elegant Typography for TECH HABBA (Zero Chunky 3D Extrusion) */
+.title-pravrutti {
+  font-family: 'Marcellus', 'Cinzel Decorative', 'Plus Jakarta Sans', serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, #FFF7E2 0%, #E8CA80 32%, #BE913B 65%, #DFB75F 88%, #9E7322 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 24px rgba(232, 202, 128, 0.42)) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.95));
+}
+
+.pravrutti-top-bar {
+  background: linear-gradient(90deg, transparent 0%, #E8CA80 6%, #FFF8E6 50%, #E8CA80 94%, transparent 100%);
+  box-shadow: 0 0 16px rgba(232, 202, 128, 0.65), 0 0 30px rgba(245, 158, 11, 0.3);
+}
+
+.pravrutti-sub-badge {
+  font-family: 'Fira Code', 'Orbitron', monospace;
+  color: #FACC15;
+  text-shadow: 0 0 14px rgba(250, 204, 21, 0.7), 0 0 28px rgba(245, 158, 11, 0.4);
+  letter-spacing: 0.22em;
+}
+
 .title-3d-white {
   color: #ffffff;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  text-shadow: 
-    0 1px 0 #ffffff,
-    0 2px 0 #e4e4e7,
-    0 3px 0 #d4d4d8,
-    0 4px 0 #a1a1aa,
-    0 5px 0 #71717a,
-    0 6px 0 #52525b,
-    0 7px 0 #3f3f46,
-    0 8px 0 #27272a,
-    0 9px 0 #18181b,
-    0 12px 24px rgba(0, 0, 0, 0.98),
-    0 24px 48px rgba(0, 0, 0, 0.9),
-    0 0 35px rgba(255, 255, 255, 0.3);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .title-3d-metallic {
-  color: #ffffff;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  text-shadow: 
-    0 1px 0 #ffffff,
-    0 2px 0 #f4f4f5,
-    0 3px 0 #d4d4d8,
-    0 4px 0 #a1a1aa,
-    0 5px 0 #71717a,
-    0 6px 0 #52525b,
-    0 7px 0 #3f3f46,
-    0 8px 0 #27272a,
-    0 12px 24px rgba(0, 0, 0, 0.98),
-    0 24px 48px rgba(0, 0, 0, 0.9);
+  color: #f4f4f5;
+  font-weight: 800;
 }
 
 .text-3d-subtle {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   MINECRAFT THEME STYLES & RETRO PIXEL UTILITIES
+   ========================================================================== */
+.font-minecraft {
+  font-family: 'Press Start 2P', 'Silkscreen', monospace;
+}
+
+.font-minecraft-alt {
+  font-family: 'VT323', monospace;
+}
+
+@keyframes minecraft-splash-pulse {
+  0% { transform: rotate(-12deg) scale(0.94); }
+  100% { transform: rotate(-12deg) scale(1.08); }
+}
+
+.minecraft-splash {
+  font-family: 'VT323', 'Press Start 2P', monospace;
+  color: #ffff00;
+  text-shadow: 2px 2px 0 #3f3f00, 0 0 12px rgba(255, 255, 0, 0.6);
+  animation: minecraft-splash-pulse 0.75s ease-in-out infinite alternate;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.minecraft-title-stone {
+  font-family: 'Press Start 2P', 'Silkscreen', monospace;
+  color: #d1d5db;
   text-shadow: 
-    0 1px 0 #a1a1aa,
-    0 2px 0 #52525b,
-    0 3px 0 #27272a,
-    0 5px 12px rgba(0, 0, 0, 0.9);
+    3px 3px 0 #374151,
+    -2px -2px 0 #f9fafb,
+    5px 5px 0 #111827,
+    0 0 30px rgba(77, 237, 244, 0.4);
+}
+
+.minecraft-xp-level {
+  font-family: 'Press Start 2P', monospace;
+  color: #55FF55;
+  text-shadow: 2px 2px 0 #005500, 0 0 15px rgba(85, 255, 85, 0.8);
+}
+
+.btn-minecraft {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  background-color: #3b3b44;
+  border-top: 3px solid #6b6b7a;
+  border-left: 3px solid #6b6b7a;
+  border-bottom: 3px solid #1a1a20;
+  border-right: 3px solid #1a1a20;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #111115;
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.15s ease;
+  user-select: none;
+}
+.btn-minecraft:hover {
+  background-color: #4a4a56;
+  filter: brightness(1.15);
+}
+.btn-minecraft:active {
+  border-top: 3px solid #1a1a20;
+  border-left: 3px solid #1a1a20;
+  border-bottom: 3px solid #6b6b7a;
+  border-right: 3px solid #6b6b7a;
+  transform: translateY(2px);
+}
+
+.btn-minecraft-emerald {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  background-color: #17dd62;
+  border-top: 3px solid #6eff9f;
+  border-left: 3px solid #6eff9f;
+  border-bottom: 3px solid #086127;
+  border-right: 3px solid #086127;
+  color: #032b10;
+  text-shadow: 1px 1px 0 #6eff9f;
+  box-shadow: 0 0 25px rgba(23, 221, 98, 0.45);
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.15s ease;
+  user-select: none;
+}
+.btn-minecraft-emerald:hover {
+  filter: brightness(1.18);
+  box-shadow: 0 0 35px rgba(23, 221, 98, 0.65);
+}
+.btn-minecraft-emerald:active {
+  border-top: 3px solid #086127;
+  border-left: 3px solid #086127;
+  border-bottom: 3px solid #6eff9f;
+  border-right: 3px solid #6eff9f;
+  transform: translateY(2px);
+}
+
+.btn-minecraft-diamond {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  background-color: #2cc9e8;
+  border-top: 3px solid #8cf4ff;
+  border-left: 3px solid #8cf4ff;
+  border-bottom: 3px solid #0a5668;
+  border-right: 3px solid #0a5668;
+  color: #02252e;
+  text-shadow: 1px 1px 0 #8cf4ff;
+  box-shadow: 0 0 25px rgba(77, 237, 244, 0.45);
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.15s ease;
+  user-select: none;
+}
+.btn-minecraft-diamond:hover {
+  filter: brightness(1.18);
+  box-shadow: 0 0 35px rgba(77, 237, 244, 0.65);
+}
+.btn-minecraft-diamond:active {
+  border-top: 3px solid #0a5668;
+  border-left: 3px solid #0a5668;
+  border-bottom: 3px solid #8cf4ff;
+  border-right: 3px solid #8cf4ff;
+  transform: translateY(2px);
+}
+
+.minecraft-slot {
+  background: #14141a;
+  border-top: 3px solid #08080c;
+  border-left: 3px solid #08080c;
+  border-bottom: 3px solid #32323f;
+  border-right: 3px solid #32323f;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 /* Clean High-Contrast Monochrome Text */

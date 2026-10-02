@@ -147,91 +147,98 @@ const Navbar = () => {
           </div>
 
           {/* Mobile hamburger menu */}
+          {/* Mobile hamburger menu */}
           <div className="lg:hidden flex items-center space-x-2">
             <Link
               to="/register"
-              className="md:hidden px-3 py-1.5 rounded text-xs font-bold bg-white text-black shadow-sm font-cyber"
+              className="md:hidden btn-minecraft-emerald !py-1 !px-2.5 text-[9px] font-minecraft inline-block"
             >
               REGISTER
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-zinc-300 hover:text-white bg-white/5 border border-white/10 focus:outline-none"
+              className="p-1.5 sm:p-2 bg-[#14141a] border-2 border-[#383848] text-zinc-300 hover:text-white focus:outline-none"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+              {isOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
             </button>
           </div>
 
         </div>
       </div>
 
-      {/* Mobile Slide-out Navigation */}
+      {/* Mobile Slide-out Navigation (Minecraft Pocket Edition GUI Style) */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#000000]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 shadow-2xl"
+            transition={{ duration: 0.25 }}
+            className="lg:hidden bg-[#0a0a0f]/98 backdrop-blur-2xl border-b-4 border-[#32323f] px-5 py-5 shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-3">
+              <div className="text-[10px] font-minecraft text-[#fbee37] pb-1 border-b border-white/10 uppercase">
+                [ REALM NAVIGATION MENU ]
+              </div>
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={() => handleNavClick(link.path)}
-                  className="text-sm uppercase tracking-widest font-semibold text-zinc-200 hover:text-white transition-colors py-2 border-b border-white/5 flex items-center justify-between"
+                  className="text-xs uppercase tracking-widest font-minecraft text-zinc-200 hover:text-[#4dedf4] transition-colors py-2 border-b border-white/5 flex items-center justify-between"
                 >
-                  <span>{link.name}</span>
-                  <span className="text-xs text-zinc-500 font-mono">/&gt;</span>
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-[#55FF55] inline-block" />
+                    <span>{link.name}</span>
+                  </span>
+                  <span className="text-[10px] text-zinc-500 font-mono">/&gt;</span>
                 </Link>
               ))}
 
-              <div className="pt-4 flex flex-col gap-3">
+              <div className="pt-3 flex flex-col gap-2.5">
                 {user ? (
                   <>
                     <Link
                       to="/dashboard"
                       onClick={() => setIsOpen(false)}
-                      className="w-full py-3 rounded-lg text-center font-bold text-sm bg-zinc-900 text-white border border-white/20 flex items-center justify-center gap-2"
+                      className="btn-minecraft w-full py-2.5 text-center text-xs flex items-center justify-center gap-2 font-minecraft"
                     >
-                      <User className="w-4 h-4 text-zinc-300" />
-                      Student Dashboard ({user.name})
+                      <User className="w-3.5 h-3.5 text-zinc-300" />
+                      <span>Dashboard ({user.name.split(' ')[0]})</span>
                     </Link>
                     {isAdmin && (
                       <Link
                         to="/admin"
                         onClick={() => setIsOpen(false)}
-                        className="w-full py-3 rounded-lg text-center font-bold text-sm bg-zinc-800 text-white border border-white/30 flex items-center justify-center gap-2"
+                        className="btn-minecraft w-full py-2.5 text-center text-xs flex items-center justify-center gap-2 font-minecraft text-[#fbee37]"
                       >
-                        <Shield className="w-4 h-4 text-white" />
-                        Admin Dashboard
+                        <Shield className="w-3.5 h-3.5 text-[#fbee37]" />
+                        <span>Admin Realm</span>
                       </Link>
                     )}
                     <button
                       onClick={() => { logout(); setIsOpen(false); }}
-                      className="w-full py-2.5 rounded-lg text-center text-xs font-semibold text-zinc-400 bg-zinc-950 border border-white/10"
+                      className="w-full py-2 text-center text-[10px] font-minecraft text-zinc-400 bg-[#121218] border border-white/10 hover:text-white"
                     >
-                      Sign Out
+                      [ DISCONNECT / LOGOUT ]
                     </button>
                   </>
                 ) : (
                   <>
                     <Link
-                      to="/login"
-                      onClick={() => setIsOpen(false)}
-                      className="btn-outline w-full text-center text-xs py-3"
-                    >
-                      SIGN IN / LOGIN
-                    </Link>
-                    <Link
                       to="/register"
                       onClick={() => setIsOpen(false)}
-                      className="btn-primary w-full text-center text-xs py-3 font-cyber"
+                      className="btn-minecraft-emerald w-full text-center text-[10px] min-[380px]:text-xs py-3 font-minecraft flex items-center justify-center gap-2"
                     >
-                      REGISTER FOR EVENTS
+                      <span>ENTER THE REALM [REGISTER]</span>
+                    </Link>
+                    <Link
+                      to="/login"
+                      onClick={() => setIsOpen(false)}
+                      className="btn-minecraft w-full text-center text-[10px] min-[380px]:text-xs py-2.5 font-minecraft"
+                    >
+                      SIGN IN / LOGIN
                     </Link>
                   </>
                 )}
