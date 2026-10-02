@@ -62,13 +62,18 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo with 3D Monochromatic emblem */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <FloatingLogo size={36} />
+          <Link to="/" className="flex items-center space-x-2.5 group flex-shrink-0">
+            <FloatingLogo size={32} />
             <div className="flex flex-col">
-              <span className="font-cyber font-black tracking-wider text-xl text-white flex items-center gap-1.5">
-                <span className="text-white text-3d-subtle">TECH HABBA</span> <span className="text-black font-sans text-xs px-1.5 py-0.5 rounded bg-white font-bold">2.0</span>
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-zinc-400 font-medium">
+              <div className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="font-cyber font-black tracking-wide text-sm min-[360px]:text-base sm:text-xl text-white">
+                  TECH HABBA
+                </span>
+                <span className="text-black font-sans text-[10px] sm:text-xs px-1.5 py-0.5 rounded bg-white font-bold leading-none flex-shrink-0">
+                  2.0
+                </span>
+              </div>
+              <span className="text-[7.5px] min-[360px]:text-[8px] sm:text-[9px] uppercase tracking-[0.18em] sm:tracking-[0.25em] text-zinc-400 font-medium whitespace-nowrap">
                 Acharya Institute of Technology
               </span>
             </div>
@@ -146,18 +151,11 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile hamburger menu */}
-          {/* Mobile hamburger menu */}
+          {/* Mobile hamburger menu (Clean, uncrowded) */}
           <div className="lg:hidden flex items-center space-x-2">
-            <Link
-              to="/register"
-              className="md:hidden btn-minecraft-emerald !py-1 !px-2.5 text-[9px] font-minecraft inline-block"
-            >
-              REGISTER
-            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-1.5 sm:p-2 bg-[#14141a] border-2 border-[#383848] text-zinc-300 hover:text-white focus:outline-none"
+              className="p-2 bg-[#14141a] border-2 border-[#383848] text-zinc-300 hover:text-white focus:outline-none"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}

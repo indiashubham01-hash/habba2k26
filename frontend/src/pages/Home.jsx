@@ -46,32 +46,32 @@ const Countdown = () => {
   const xpPercent = Math.min(100, Math.max(6, ((60 - timeLeft.seconds) / 60) * 100));
 
   return (
-    <div className="w-full max-w-xl mx-auto my-5 px-2">
+    <div className="w-full max-w-xl mx-auto my-2.5 sm:my-5 px-2">
       {/* Minecraft Inventory Hotbar Slots for Countdown */}
-      <div className="grid grid-cols-4 gap-1.5 min-[380px]:gap-2 sm:gap-4 mb-2.5">
+      <div className="grid grid-cols-4 gap-1.5 min-[380px]:gap-2 sm:gap-4 mb-2">
         {[
-          { label: 'DAYS', val: timeLeft.days, color: '#4dedf4', ore: 'DIAMOND' },
-          { label: 'HOURS', val: timeLeft.hours, color: '#17dd62', ore: 'EMERALD' },
-          { label: 'MINUTES', val: timeLeft.minutes, color: '#fbee37', ore: 'GOLD' },
-          { label: 'SECONDS', val: timeLeft.seconds, color: '#ff2a44', ore: 'REDSTONE' },
+          { label: 'DAYS', val: timeLeft.days, color: '#38bdf8', ore: 'DIAMOND' },
+          { label: 'HOURS', val: timeLeft.hours, color: '#4ade80', ore: 'EMERALD' },
+          { label: 'MINUTES', val: timeLeft.minutes, color: '#facc15', ore: 'GOLD' },
+          { label: 'SECONDS', val: timeLeft.seconds, color: '#f87171', ore: 'REDSTONE' },
         ].map((item) => (
           <div
             key={item.label}
             className="minecraft-slot p-1.5 min-[380px]:p-2.5 sm:p-4 flex flex-col items-center justify-center relative group transition-transform hover:scale-105"
           >
             {/* Top slot highlight */}
-            <div className="absolute top-1 left-1 right-1 h-[1.5px] bg-white/10 pointer-events-none" />
+            <div className="absolute top-1 left-1 right-1 h-[1px] bg-white/10 pointer-events-none" />
             
             <span
-              className="font-minecraft text-base min-[360px]:text-lg min-[410px]:text-xl sm:text-3xl md:text-4xl font-black text-white"
+              className="font-minecraft text-base min-[360px]:text-lg min-[410px]:text-xl sm:text-3xl md:text-4xl font-black"
               style={{
-                textShadow: `2px 2px 0 #101015, 0 0 16px ${item.color}80`,
+                textShadow: `2px 2px 0 #101015, 0 0 10px ${item.color}40`,
                 color: item.color,
               }}
             >
               {item.val.toString().padStart(2, '0')}
             </span>
-            <span className="text-[7.5px] min-[360px]:text-[8px] min-[410px]:text-[9px] sm:text-[10px] font-minecraft tracking-tight sm:tracking-wider text-zinc-400 mt-1 uppercase whitespace-nowrap">
+            <span className="text-[7px] min-[360px]:text-[7.5px] min-[410px]:text-[8.5px] sm:text-[10px] font-minecraft tracking-tight sm:tracking-wider text-zinc-400 mt-1 uppercase whitespace-nowrap">
               {item.label}
             </span>
           </div>
@@ -79,18 +79,20 @@ const Countdown = () => {
       </div>
 
       {/* Minecraft Experience (XP) Bar with Level 2.0 */}
-      <div className="relative pt-1 sm:pt-2 pb-1 px-1">
+      <div className="relative pt-0.5 sm:pt-1.5 pb-1 px-1">
         {/* XP Level Badge Centered */}
         <div className="flex justify-center items-center mb-1">
-          <span className="minecraft-xp-level text-xs sm:text-sm md:text-base font-bold">
-            2.0
+          <span className="minecraft-xp-level text-xs sm:text-sm font-bold inline-flex items-baseline">
+            <span>2</span>
+            <span className="-mx-0.5 text-[0.85em]">.</span>
+            <span>0</span>
           </span>
         </div>
 
         {/* Authentic Segmented Minecraft XP Progress Bar */}
-        <div className="w-full h-2.5 sm:h-3 bg-[#111115] border-t-2 border-l-2 border-[#000000] border-b-2 border-r-2 border-[#383842] p-[1px] relative overflow-hidden">
+        <div className="w-full h-2 sm:h-2.5 bg-[#111115] border-t-2 border-l-2 border-[#000000] border-b-2 border-r-2 border-[#383842] p-[1px] relative overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-[#17dd62] via-[#55ff55] to-[#aaff55] transition-all duration-500 shadow-[0_0_12px_#55ff55]"
+            className="h-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-green-400 transition-all duration-500"
             style={{ width: `${xpPercent}%` }}
           />
           {/* Grid lines overlay for Minecraft XP slot divisions */}
@@ -127,17 +129,17 @@ const Home = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-black bg-workbench-gradient text-white overflow-x-hidden selection:bg-[#4dedf4] selection:text-black">
+    <div className="relative min-h-screen bg-black bg-workbench-gradient text-white overflow-x-hidden selection:bg-[#38bdf8] selection:text-black">
       {/* 3D Voxel Blocks & XP Orbs Canvas System */}
       <MinecraftParticleBackground />
 
       {/* ==================================================
           1. HERO SECTION (Authentic Minecraft Fest Arena)
           ================================================== */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-16 sm:pb-20 px-3 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-16 sm:pt-24 pb-8 sm:pb-16 px-3 sm:px-6 lg:px-8 overflow-hidden">
 
         {/* Soft Monochromatic White Ambient Light (Zero Red) */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[650px] h-[350px] sm:h-[650px] bg-white/[0.03] rounded-full blur-[120px] sm:blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[650px] h-[300px] sm:h-[650px] bg-white/[0.03] rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center w-full">
 
@@ -146,64 +148,63 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="flex flex-col items-center justify-center mb-3 sm:mb-4"
+            className="flex flex-col items-center justify-center mb-1.5 sm:mb-3"
           >
             <AcharyaBigOEmblem3D />
           </motion.div>
 
           {/* Minecraft 3D Stone Title + Bouncing Yellow Splash Text */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-3 sm:mb-4"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-1.5 sm:mb-3"
           >
             <TechHabbaMinecraftTitle />
           </motion.div>
 
-          {/* Minecraft Server / Fest Tagline (Wrapped for phone screens) */}
+          {/* Minecraft Server / Fest Tagline (Compact & clean) */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-3 sm:mb-4 px-2"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mb-2.5 sm:mb-3.5 px-2"
           >
-            <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 font-mono text-[10px] min-[380px]:text-xs sm:text-sm md:text-base uppercase text-zinc-300 select-none">
-              <span className="text-[#17dd62] font-bold">[REALM OPEN]</span>
-              <span className="opacity-40">//</span>
-              <span className="text-white font-bold font-minecraft text-[9px] min-[380px]:text-[10px] sm:text-xs">WHERE TECH MEETS TALENT</span>
-              <span className="opacity-40">//</span>
-              <span className="text-[#4dedf4] font-bold">[13 QUESTS]</span>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 bg-zinc-950/80 border border-zinc-800 shadow-sm font-minecraft text-[8.5px] min-[380px]:text-[9.5px] sm:text-xs uppercase text-zinc-300 select-none">
+              <span className="w-1.5 h-1.5 bg-emerald-400 inline-block flex-shrink-0" />
+              <span className="text-zinc-100 font-bold">WHERE TECH MEETS TALENT</span>
+              <span className="text-zinc-600">//</span>
+              <span className="text-sky-400 font-bold">13 QUESTS</span>
             </div>
           </motion.div>
 
           {/* Minecraft Theme Description */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-zinc-400 font-mono text-xs sm:text-sm md:text-base max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed font-normal px-2"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-zinc-400 font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto mb-4 sm:mb-6 leading-relaxed font-normal px-3"
           >
-            The national collegiate technical festival crafted in high-res voxel grandeur. Gather your squad, mine breakthrough solutions in the 24-hour hackathon, and clash for ₹1,50,000+ in bounties.
+            The national collegiate technical festival in high-res voxel grandeur. Gather your squad, mine breakthrough solutions, and clash for ₹1,50,000+ in bounties.
           </motion.p>
 
-          {/* Minecraft Emerald & Diamond Voxel Action Buttons (Full width on mobile, inline on desktop) */}
+          {/* Minecraft Emerald & Diamond Voxel Action Buttons (Comfortable on phone, inline on desktop) */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-7 sm:mb-8 w-full max-w-xs sm:max-w-none mx-auto"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-4 mb-4 sm:mb-6 w-full max-w-[280px] sm:max-w-none mx-auto"
           >
             <Link
               to="/register"
-              className="btn-minecraft-emerald w-full sm:w-auto text-center px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
+              className="btn-minecraft-emerald w-full sm:w-auto text-center px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
             >
               <span>ENTER THE REALM [REGISTER]</span>
-              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
             </Link>
             <Link
               to="/events"
-              className="btn-minecraft-diamond w-full sm:w-auto text-center px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
+              className="btn-minecraft-diamond w-full sm:w-auto text-center px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-center gap-2 text-[10px] min-[380px]:text-[11px] sm:text-xs"
             >
               <span className="text-xs">⚔</span>
               <span>EXPLORE QUESTS [13 EVENTS]</span>
@@ -214,13 +215,13 @@ const Home = () => {
               2. MINECRAFT COUNTDOWN & XP PROGRESS BAR
               ================================================== */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="pt-1 sm:pt-2"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="pt-0"
           >
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 bg-[#1a1a24] border border-[#3b3b4f] rounded-none text-[9px] min-[380px]:text-[10px] sm:text-[11px] font-minecraft font-bold tracking-wider text-[#55FF55] uppercase mb-1 shadow-md">
-              <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#55FF55]" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#14141a] border border-[#383848] text-[8.5px] min-[380px]:text-[9.5px] sm:text-[10px] font-minecraft font-bold tracking-wider text-emerald-400 uppercase mb-1.5 shadow-sm">
+              <Clock className="w-3 h-3 text-emerald-400" />
               <span>SERVER LAUNCH & FEST COUNTDOWN</span>
             </div>
             <Countdown />
