@@ -966,26 +966,38 @@ const Home = () => {
               </div>
 
               {/* Student Coordinators Card */}
-              <div className="minecraft-slot p-5 sm:p-6 border-l-4 border-l-[#17dd62]">
-                <span className="text-[9px] sm:text-[10px] font-minecraft text-[#17dd62] font-bold uppercase block mb-1">
-                  [ STUDENT GUILD LEADERS ]
+              <div className="minecraft-slot p-5 sm:p-6 border-l-4 border-l-[#22c55e]">
+                <span className="text-[9px] sm:text-[10px] font-minecraft text-emerald-400 font-bold uppercase block mb-1">
+                  [ STUDENT COORDINATORS & EVENT HEADS ]
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-2">
-                  <div>
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Aryan Sharma (President)</h4>
-                    <p className="text-xs text-zinc-400 font-mono">+91 98765 12345</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-3">
+                  <div className="p-3 bg-[#0d0d14] border border-white/10">
+                    <h4 className="font-bold text-white text-xs sm:text-sm">Aditya</h4>
+                    <span className="text-[10px] text-amber-300 font-minecraft block mb-1">Lead Student Coordinator</span>
+                    <p className="text-[10px] text-zinc-400 font-mono mb-1">CP & The Big Hack Head</p>
+                    <p className="text-xs text-zinc-200 font-mono flex items-center gap-1.5"><Phone className="w-3 h-3 text-emerald-400" /> +91 777981810</p>
+                    <p className="text-[10.5px] text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5"><Mail className="w-3 h-3 text-sky-400" /> adityal2.24.beis@acharya.ac.in</p>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Pooja Hegde (Vice President)</h4>
-                    <p className="text-xs text-zinc-400 font-mono">+91 98765 12346</p>
+                  <div className="p-3 bg-[#0d0d14] border border-white/10">
+                    <h4 className="font-bold text-white text-xs sm:text-sm">Shubham Kumar</h4>
+                    <span className="text-[10px] text-amber-300 font-minecraft block mb-1">Lead Student Coordinator</span>
+                    <p className="text-[10px] text-zinc-400 font-mono mb-1">Workshop & The Big Hack Head</p>
+                    <p className="text-xs text-zinc-200 font-mono flex items-center gap-1.5"><Phone className="w-3 h-3 text-emerald-400" /> +91 9334590992</p>
+                    <p className="text-[10.5px] text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5"><Mail className="w-3 h-3 text-sky-400" /> shubhmas.24.beis@acharya.ac.in</p>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Karthik Rao (Technical Lead)</h4>
-                    <p className="text-xs text-zinc-400 font-mono">+91 98765 12347</p>
+                  <div className="p-3 bg-[#0d0d14] border border-white/10">
+                    <h4 className="font-bold text-white text-xs sm:text-sm">Dhanush</h4>
+                    <span className="text-[10px] text-sky-400 font-minecraft block mb-1">Event Lead</span>
+                    <p className="text-[10px] text-zinc-400 font-mono mb-1">Chess Championship</p>
+                    <p className="text-xs text-zinc-200 font-mono flex items-center gap-1.5"><Phone className="w-3 h-3 text-emerald-400" /> +91 9334590992</p>
+                    <p className="text-[10.5px] text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5"><Mail className="w-3 h-3 text-sky-400" /> chess@techhabba2k26.in</p>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Deepak S (Hospitality & Stalls)</h4>
-                    <p className="text-xs text-zinc-400 font-mono">+91 98765 12348</p>
+                  <div className="p-3 bg-[#0d0d14] border border-white/10">
+                    <h4 className="font-bold text-white text-xs sm:text-sm">Abhay</h4>
+                    <span className="text-[10px] text-sky-400 font-minecraft block mb-1">Event Lead</span>
+                    <p className="text-[10px] text-zinc-400 font-mono mb-1">Capture The Flag (CTF)</p>
+                    <p className="text-xs text-zinc-200 font-mono flex items-center gap-1.5"><Phone className="w-3 h-3 text-emerald-400" /> +91 777981810</p>
+                    <p className="text-[10.5px] text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5"><Mail className="w-3 h-3 text-sky-400" /> ctf@techhabba2k26.in</p>
                   </div>
                 </div>
               </div>
