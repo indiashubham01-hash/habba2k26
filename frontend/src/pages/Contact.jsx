@@ -58,39 +58,21 @@ const Contact = () => {
             {/* Student Coordinators */}
             <div className="glass-card p-6 rounded-2xl border border-pink-500/30">
               <span className="text-[10px] font-mono font-bold uppercase text-pink-400 block mb-3">
-                STUDENT COORDINATORS & EVENT HEADS
+                EVENT HEADS & STUDENT LEADERSHIP
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div className="p-3.5 rounded-xl bg-dark-900/80 border border-white/10 space-y-1">
                   <h4 className="font-bold text-white text-sm">Aditya</h4>
-                  <span className="text-[10px] text-amber-400 uppercase font-mono block font-bold">Lead Student Coordinator</span>
-                  <span className="text-[10px] text-gray-400 block">CP & The Big Hack (Hackathon) Head</span>
+                  <span className="text-[10px] text-amber-400 uppercase font-mono block font-bold">Event Head</span>
                   <a href="tel:+91777981810" className="text-emerald-400 font-mono text-[11px] block hover:underline">+91 777981810</a>
                   <a href="mailto:adityal2.24.beis@acharya.ac.in" className="text-cyan-400 font-mono text-[10px] block truncate hover:underline">adityal2.24.beis@acharya.ac.in</a>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-dark-900/80 border border-white/10 space-y-1">
-                  <h4 className="font-bold text-white text-sm">Shubham Kumar</h4>
-                  <span className="text-[10px] text-amber-400 uppercase font-mono block font-bold">Lead Student Coordinator</span>
-                  <span className="text-[10px] text-gray-400 block">Workshop & The Big Hack (Hackathon) Head</span>
+                  <h4 className="font-bold text-white text-sm">Shubham</h4>
+                  <span className="text-[10px] text-amber-400 uppercase font-mono block font-bold">Event Head</span>
                   <a href="tel:+919334590992" className="text-emerald-400 font-mono text-[11px] block hover:underline">+91 9334590992</a>
                   <a href="mailto:shubhmas.24.beis@acharya.ac.in" className="text-cyan-400 font-mono text-[10px] block truncate hover:underline">shubhmas.24.beis@acharya.ac.in</a>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-dark-900/80 border border-white/10 space-y-1">
-                  <h4 className="font-bold text-white text-sm">Dhanush</h4>
-                  <span className="text-[10px] text-cyan-400 uppercase font-mono block font-bold">Event Lead</span>
-                  <span className="text-[10px] text-gray-400 block">Chess Championship</span>
-                  <a href="tel:+919334590992" className="text-emerald-400 font-mono text-[11px] block hover:underline">+91 9334590992</a>
-                  <span className="text-gray-400 font-mono text-[10px] block">chess@techhabba2k26.in</span>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-dark-900/80 border border-white/10 space-y-1">
-                  <h4 className="font-bold text-white text-sm">Abhay</h4>
-                  <span className="text-[10px] text-cyan-400 uppercase font-mono block font-bold">Event Lead</span>
-                  <span className="text-[10px] text-gray-400 block">Capture The Flag (CTF)</span>
-                  <a href="tel:+91777981810" className="text-emerald-400 font-mono text-[11px] block hover:underline">+91 777981810</a>
-                  <span className="text-gray-400 font-mono text-[10px] block">ctf@techhabba2k26.in</span>
                 </div>
               </div>
             </div>

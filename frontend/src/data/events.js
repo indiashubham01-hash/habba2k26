@@ -66,7 +66,7 @@ export const eventsData = [
     teamSize: 'Individual',
     fee: 150,
     prizePool: '₹15,000 + Trophies',
-    coordinator: 'Aditya (Event Lead)',
+    coordinator: 'Dhanush (Event Lead)',
     contactPhone: '+91 777981810',
     contactEmail: 'adityal2.24.beis@acharya.ac.in',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000',
@@ -171,7 +171,7 @@ export const eventsData = [
     teamSize: 'Team of 2-4',
     fee: 500,
     prizePool: '₹60,000 + Incubation Support + Goodies',
-    coordinator: 'Aditya & Shubham Kumar (Event Leads)',
+    coordinator: 'Aditya & Shubham (Event Leads)',
     contactPhone: '+91 777981810 / +91 9334590992',
     contactEmail: 'adityal2.24.beis@acharya.ac.in',
     image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000',
@@ -444,31 +444,15 @@ export const eventsData = [
 export const studentCoordinators = [
   {
     name: 'Aditya',
-    role: 'Lead Student Coordinator',
-    responsibility: 'CP & The Big Hack (Hackathon) Head',
+    role: 'Event Head',
     phone: '+91 777981810',
     email: 'adityal2.24.beis@acharya.ac.in',
   },
   {
-    name: 'Shubham Kumar',
-    role: 'Lead Student Coordinator',
-    responsibility: 'Workshop & The Big Hack (Hackathon) Head',
+    name: 'Shubham',
+    role: 'Event Head',
     phone: '+91 9334590992',
     email: 'shubhmas.24.beis@acharya.ac.in',
-  },
-  {
-    name: 'Dhanush',
-    role: 'Event Lead',
-    responsibility: 'Chess Championship Head',
-    phone: '+91 9334590992',
-    email: 'chess@techhabba2k26.in',
-  },
-  {
-    name: 'Abhay',
-    role: 'Event Lead',
-    responsibility: 'Capture The Flag (CTF) Head',
-    phone: '+91 777981810',
-    email: 'ctf@techhabba2k26.in',
   }
 ];
 
@@ -478,10 +462,10 @@ export const scheduleData = [
     date: '12 November 2026',
     events: [
       { id: 'ai-agents-workshop', name: 'Workshop / AI Agents Masterclass', category: 'TECHNICAL', time: '10:00 AM - 01:30 PM', venue: 'Main Auditorium', coordinator: 'Shubham Kumar', conflict: false },
-      { id: 'the-big-hack', name: 'The Big Hack (Hackathon Kickoff)', category: 'HACKATHON', time: '10:00 AM (24 Hours)', venue: 'Central Innovation Hub', coordinator: 'Aditya & Shubham Kumar', conflict: false },
+      { id: 'the-big-hack', name: 'The Big Hack (Hackathon Kickoff)', category: 'HACKATHON', time: '10:00 AM (24 Hours)', venue: 'Central Innovation Hub', coordinator: 'Aditya & Shubham', conflict: false },
       { id: 'free-fire-battle', name: 'Free Fire', category: 'GAMING', time: '11:00 AM - 05:00 PM', venue: 'eSports Arena (Auditorium 2)', coordinator: 'Shubham', conflict: true },
       { id: 'logo-graphic-design', name: 'Logo Design / Graphic Design', category: 'CREATIVE', time: '01:30 PM - 04:30 PM', venue: 'Design Lab', coordinator: 'Dibyanshu', conflict: false },
-      { id: 'competitive-programming', name: 'CP', category: 'CODING', time: '02:00 PM - 05:00 PM', venue: 'Turing Computer Labs', coordinator: 'Aditya', conflict: true },
+      { id: 'competitive-programming', name: 'CP', category: 'CODING', time: '02:00 PM - 05:00 PM', venue: 'Turing Computer Labs', coordinator: 'Dhanush', conflict: true },
       { id: 'cultural-night-1', name: 'Cyberpunk DJ Night & Welcome Gala', category: 'FUN / MANAGEMENT', time: '06:30 PM - 09:30 PM', venue: 'Open Air Amphitheatre', coordinator: 'Student Council', conflict: false }
     ]
   },
@@ -491,11 +475,11 @@ export const scheduleData = [
     events: [
       { id: 'valorant-clash', name: 'Valorant Tournament', category: 'GAMING', time: '09:00 AM - 06:30 PM', venue: 'Pro-Gaming LAN Arena', coordinator: 'Ayush Mallick', conflict: false },
       { id: 'capture-the-flag', name: 'CTF', category: 'TECHNICAL', time: '09:30 AM - 04:30 PM', venue: 'Cyber Security Operations Center', coordinator: 'Abhay', conflict: false },
-      { id: 'the-big-hack-judging', name: 'The Big Hack - Grand Pitch & Finals', category: 'HACKATHON', time: '10:00 AM - 01:00 PM', venue: 'Central Innovation Hub', coordinator: 'Aditya & Shubham Kumar', conflict: true },
+      { id: 'the-big-hack-judging', name: 'The Big Hack - Grand Pitch & Finals', category: 'HACKATHON', time: '10:00 AM - 01:00 PM', venue: 'Central Innovation Hub', coordinator: 'Aditya & Shubham', conflict: true },
       { id: 'peer-to-peer', name: 'P2P', category: 'TECHNICAL', time: '10:00 AM - 01:00 PM', venue: 'Advanced Networking Lab', coordinator: 'Hardik', conflict: true },
       { id: 'it-quiz-championship', name: 'IT Quiz / Tech Quiz Championship', category: 'QUIZ', time: '11:00 AM - 02:30 PM', venue: 'Dr. APJ Abdul Kalam Auditorium', coordinator: 'Askani', conflict: false },
       { id: 'chess-tournament', name: 'Chess', category: 'FUN / MANAGEMENT', time: '02:00 PM - 06:00 PM', venue: 'Indoor Sports Pavilion', coordinator: 'Dhanush', conflict: false },
-      { id: 'hackathon-awards', name: 'Hackathon Award Ceremony', category: 'HACKATHON', time: '05:30 PM - 07:00 PM', venue: 'Main Auditorium', coordinator: 'Aditya & Shubham Kumar', conflict: false }
+      { id: 'hackathon-awards', name: 'Hackathon Award Ceremony', category: 'HACKATHON', time: '05:30 PM - 07:00 PM', venue: 'Main Auditorium', coordinator: 'Aditya & Shubham', conflict: false }
     ]
   },
   {
